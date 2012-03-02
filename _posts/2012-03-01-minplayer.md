@@ -5,7 +5,7 @@ minplayer:
   debug: true
   template: default
 tagline:
-category:
+category: media
 tags: []
 ---
 
