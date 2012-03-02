@@ -9,7 +9,7 @@ category:
 tags: []
 ---
 
-###Wow!!
+###Check out travist's minPlayer
 {% highlight html %}
 <script type="text/javascript">
   $(function() {
