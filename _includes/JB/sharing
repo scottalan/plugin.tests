@@ -1,8 +1,6 @@
-{% if site.safe and site.JB.sharing.provider and page.JB.sharing != false %}
-
+{% if site.JB.sharing.provider and site.JB.sharing.addthis.pubid != '' and page.JB.sharing != false %}
 {% case site.JB.sharing.provider %}
-{% when "custom" %}
-  {% include custom/sharing %}
+{% when "addthis" %}
+  {% include JB/social/addthis %}
 {% endcase %}
-
 {% endif %}
