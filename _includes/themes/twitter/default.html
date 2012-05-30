@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml"
+      xml:lang="en" lang="en" dir="ltr" class="js">
   <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+  <title>Damn It!!!!!</title>
+  <meta name="Description" content="Living Yoga Dallas is your source for the
+        top yoga events, studios and businesses in the Dallas/Fort Worth metroplex.
+        We not only host the country's top yoga teachers for workshops, master
+        classes and teacher trainings in the Dallas/Ft. Worth metroplex, but also
+        support the yoga community with directories of the top yoga studios, events and businesses in DFW.">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -22,6 +27,15 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+  <!-- Adding the addthis javascript. -->
+    {% if site.JB.sharing.provider and site.JB.sharing.addthis.pubid != '' and page.JB.sharing != false %}
+    {% case site.JB.sharing.provider %}
+    {% when "addthis" %}
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid={{site.JB.sharing.addthis.pubid}}"></script>
+      <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<!-- AddThis Button END -->
+    {% endcase %}
+    {% endif %}
   </head>
 
   <body>
